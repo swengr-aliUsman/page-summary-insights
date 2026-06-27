@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Page Summary Insight",
+  "version": "1.0.0",
+  "description": "Analyze any webpage and show a quick summary, reading time, and key topics.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "Page Insight",
+    "default_popup": "popup.html"
+  }
+}
